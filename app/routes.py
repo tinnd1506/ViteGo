@@ -357,6 +357,9 @@ def get_user_email(user_id):
 
 def send_payment_confirmation_email(to_email, payment_info):
     try:
+        print(f"EMAIL DEBUG: Attempting to send to {to_email}")
+        print(f"EMAIL DEBUG: Config - SERVER={app.config.get('MAIL_SERVER')}, PORT={app.config.get('MAIL_PORT')}, USERNAME={app.config.get('MAIL_USERNAME')}")
+        
         subject = 'ViteGo Receipt - Payment Confirmation'
         body = f'Thank you for your payment. Here is your receipt information:\n\nRide Cost: ${payment_info}\n\nThank you for riding with ViteGo!'
 

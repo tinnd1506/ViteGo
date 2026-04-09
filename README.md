@@ -18,7 +18,7 @@ ViteGo is a full-stack ride-sharing application built with Flask, featuring a mo
 
 ### User Features
 - **Easy Booking**: Pick-up & drop-off location selection with Google Maps
-- **Car Options**: UberX, Comfort, XL, ViteGo XL with dynamic pricing
+- **Car Options**: ViteGo, ViteGo XL with dynamic pricing
 - **Time Scheduling**: Schedule rides with custom pickup times
 - **Real-time Chat**: Live messaging with drivers via Socket.IO
 - **Payment Integration**: Secure payment processing with email confirmation
@@ -37,7 +37,7 @@ ViteGo is a full-stack ride-sharing application built with Flask, featuring a mo
 1. Visit https://vitego.onrender.com/ and click "Ride Now"
 2. Register/Login as User
 3. Enter pickup & destination locations
-4. Select preferred car type (UberX, Comfort, XL, ViteGo XL)
+4. Select preferred car type (ViteGo, ViteGo XL)
 5. Choose pickup time (default: now + 5 min)
 6. Confirm ride → Chat with driver
 7. Complete payment → Get email receipt

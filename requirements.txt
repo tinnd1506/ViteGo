@@ -3,7 +3,7 @@ Werkzeug==3.0.3
 Flask-Login==0.6.3
 Flask-WTF==1.2.1
 Flask-Mail==0.9.1
-Flask-SocketIO==5.1.1
+Flask-SocketIO==5.3.6
 Flask-DebugToolbar==0.13.1
 python-dotenv==0.19.2
 pymongo[srv]==3.12.1

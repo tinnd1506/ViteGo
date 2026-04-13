@@ -31,7 +31,71 @@ ViteGo is a full-stack ride-sharing application built with Flask, featuring a mo
 - **Earnings Tracker**: Lifetime earnings and completed rides history
 - **Real-time Chat**: Communicate with passengers
 
-## 📱 User Guide
+## �️ Tech Stack
+
+- **Backend**: Flask 3.0 (Python 3.10+)
+- **Database**: SQLite (users), MongoDB Atlas (rides, chat)
+- **Real-time**: Flask-SocketIO
+- **Maps**: Google Maps API (Places, Distance Matrix, Directions)
+- **Email**: Brevo API (transactional emails)
+- **Frontend**: HTML5, CSS3 (Glassmorphism), JavaScript, jQuery
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.10+
+- Google Maps API key
+- MongoDB Atlas cluster
+- Brevo account (for email receipts)
+
+### Installation
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/tinnd1506/ViteGo.git
+   cd ViteGo
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   copy .env.example .env
+   ```
+   Edit `.env` with your actual values (see below).
+
+4. **Run the app**
+   ```bash
+   python run.py
+   ```
+
+5. **Open** http://localhost:5000
+
+### Environment Variables
+
+| Variable | Description | Example |
+|---|---|---|
+| `SECRET_KEY` | Flask session secret | `your-secret-key` |
+| `GOOGLE_MAPS_API_KEY` | Google Maps API key | `AIzaSy...` |
+| `MONGO_DB_URL` | MongoDB connection string | `mongodb+srv://...` |
+| `MONGO_DB_NAME` | MongoDB database name | `uber_clone` |
+| `SQLITE_DB_NAME` | SQLite database file | `database.db` |
+| `BREVO_API_KEY` | Brevo API key for emails | `xkeysib-...` |
+| `MAIL_DEFAULT_SENDER` | Verified sender email | `your@email.com` |
+
+### Setting up Brevo (Email)
+
+1. Create a free account at [brevo.com](https://www.brevo.com)
+2. Go to **Settings → SMTP & API → API Keys** → create a key
+3. Go to **Settings → Senders & IP** → add and verify your sender email
+4. Add `BREVO_API_KEY` and `MAIL_DEFAULT_SENDER` to your `.env`
+
+> **Note**: SMTP ports (25, 465, 587) are blocked on Render's free tier. Brevo's HTTP API bypasses this restriction.
+
+## �� User Guide
 
 ### For Passengers
 1. Visit https://vitego.onrender.com/ and click "Ride Now"
@@ -54,7 +118,7 @@ ViteGo is a full-stack ride-sharing application built with Flask, featuring a mo
 1. **Flask 3.0 Compatibility**: All extensions updated to latest versions
 2. **MongoDB Connection**: Ensure IP whitelist includes Render's outbound IPs
 3. **Google Maps API**: Enable Places, Distance Matrix, and Geocoding APIs
-4. **Email Sending**: Use App Password for Gmail SMTP
+4. **Email Sending**: Uses Brevo API (SMTP ports are blocked on Render free tier)
 
 ### Render Deployment
 - Free tier: Sleeps after 15 min inactivity (use UptimeRobot to keep alive)
@@ -74,6 +138,7 @@ Pull requests welcome! For major changes, please open an issue first.
 - Google Maps Platform for location services
 - MongoDB Atlas for database hosting
 - Render for free deployment hosting
+- Brevo for transactional email API
 - Flask community for excellent web framework
 
 ---
